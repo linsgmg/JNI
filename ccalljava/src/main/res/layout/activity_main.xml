@@ -31,4 +31,10 @@
         android:onClick="onclick4"
         android:text="c调java staticMethod" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onclick5"
+        android:text="c调java 更新UI" />
+
 </LinearLayout>

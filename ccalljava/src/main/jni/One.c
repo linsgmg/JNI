@@ -74,3 +74,17 @@ JNIEXPORT void JNICALL Java_com_lin_ccalljava_Jni_staticCCallJava
     //成功调用了
     LOGD("value===%s\n", "c 静态有参调用java");
 }
+
+JNIEXPORT void JNICALL
+Java_com_lin_ccalljava_MainActivity_showToastCCallJava(JNIEnv *env, jobject instance) {
+
+    // TODO
+    //1. 得到字节码
+    jclass jclass1 = (*env)->FindClass(env, "com/lin/ccalljava/MainActivity");
+//2. 得到方法  jmethodID   (*GetMethodID)(JNIEnv*, jclass, const char*, const char*);
+    jmethodID jmethodID1 = (*env)->GetMethodID(env, jclass1, "showToast", "()V");
+//3. 调用方法  jint        (*CallIntMethod)(JNIEnv*, jobject, jmethodID, ...);
+    (*env)->CallVoidMethod(env, instance, jmethodID1);//Activity中UI更新,不能实例化,所以用上下文 instance
+    //成功调用了
+    LOGD("value===%s\n", "c 无参调用java,更新UI");
+}

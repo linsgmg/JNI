@@ -2,7 +2,9 @@ package com.lin.ccalljava;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Jni jni;
@@ -28,5 +30,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void onclick4(View view) {
         jni.staticCCallJava();
+    }
+
+    public void onclick5(View view) {
+        showToastCCallJava();
+    }
+
+    public native void showToastCCallJava();
+
+    public void  showToast(){
+        Log.d("-------lin---------", "showToast: -------------");
+        Toast.makeText(this, "showToast: -------------", Toast.LENGTH_SHORT).show();
     }
 }

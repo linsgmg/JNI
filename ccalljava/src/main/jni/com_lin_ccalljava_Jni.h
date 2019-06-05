@@ -39,6 +39,8 @@ JNIEXPORT void JNICALL Java_com_lin_ccalljava_Jni_printStringCCallJava
 JNIEXPORT void JNICALL Java_com_lin_ccalljava_Jni_staticCCallJava
   (JNIEnv *, jobject);
 
+
+
 #ifdef __cplusplus
 }
 #endif

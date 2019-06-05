@@ -39,6 +39,7 @@ JNIEXPORT jintArray JNICALL Java_com_lin_jni63_Jni_append
 JNIEXPORT jint JNICALL Java_com_lin_jni63_Jni_check
   (JNIEnv *, jobject, jstring);
 
+
 #ifdef __cplusplus
 }
 #endif
